@@ -10,6 +10,8 @@ eval "$(devbox global shellenv --init-hook)"
 # Git
 LANG=en_US.UTF-8
 
+alias docker="/Applications/Rancher\ Desktop.app/Contents/Resources/resources/darwin/bin/docker"
+
 # Completions
 source <(devbox completion zsh)
 source <(docker completion zsh)
@@ -19,10 +21,10 @@ source <(kubectl completion zsh)
 eval "$(starship init zsh)"
 
 # The Fuck
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # Zoxide
-eval "$(zoxide init --cmd cd zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
 
 # kubecolor
 compdef kubecolor=kubectl
@@ -68,3 +70,7 @@ alias kubectl='kubecolor'
 export PATH="$HOME/go/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/thomassolheim/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
